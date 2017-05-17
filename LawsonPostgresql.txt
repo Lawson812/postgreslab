@@ -1,0 +1,16 @@
+1. SELECT * FROM customers;
+2. SELECT country FROM customers;
+3. SELECT * FROM customers  WHERE customerid LIKE 'BL%';
+4. SELECT * FROM orders LIMIT 100;
+5. SELECT * FROM orders WHERE shippostalcode='1010' OR shippostalcode='3012' OR shippostalcode='12209' OR shippostalcode='05023';
+6. SELECT * FROM orders WHERE NOT shipregion='null';
+7. SELECT * FROM Customers ORDER BY country, city;
+8. INSERT INTO Customers(customerid, companyname, contactname, contacttitle, address, city, region, postalcode, country, phone, fax) VALUES 
+('LAWSO','Lawson packing supplies', 'James Lawson', 'CEO', '8813 Park Ave', 'Detroit', 'MI', '49810', 'USA', '3137779311', '3136345789');
+9.UPDATE orders SET shipregion = 'EuroZone' WHERE shipregion = 'France';
+10.DELETE FROM order_details WHERE quantity=1;
+11.Avg = 23.9943872778297474. Min=2. Max = 130. 
+SELECT MAX(quantity) , MIN(quantity) , AVG(quantity) FROM order_details;
+
+12.SELECT MAX(quantity) , MIN(quantity) , AVG(quantity) FROM order_details GROUP BY orderid;
+13.SELECT customerid FROM orders WHERE orderid='10290';
